@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "submissions",
+  "info": {
+    "singularName": "submission",
+    "pluralName": "submissions",
+    "displayName": "Submission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Total_Marks": {
+      "type": "decimal"
+    },
+    "Average_Marks": {
+      "type": "decimal"
+    },
+    "roll": {
+      "type": "biginteger"
+    },
+    "Experiments": {
+      "displayName": "Experiments",
+      "type": "component",
+      "repeatable": true,
+      "component": "marks.experiments"
+    }
+  }
+}

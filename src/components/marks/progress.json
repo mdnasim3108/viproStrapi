@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_marks_progresses",
+  "info": {
+    "displayName": "progress"
+  },
+  "options": {},
+  "attributes": {
+    "experiment": {
+      "type": "string"
+    },
+    "codeId": {
+      "type": "string"
+    }
+  }
+}

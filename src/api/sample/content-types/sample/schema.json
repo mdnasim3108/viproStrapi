@@ -11,7 +11,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "field": {
+    "sample": {
       "type": "string"
     }
   }
