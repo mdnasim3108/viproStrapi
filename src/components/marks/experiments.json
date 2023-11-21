@@ -1,7 +1,8 @@
 {
   "collectionName": "components_marks_experiments",
   "info": {
-    "displayName": "Experiments"
+    "displayName": "Experiments",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -23,11 +24,11 @@
     "Submitted_Date": {
       "type": "date"
     },
-    "code": {
-      "type": "blocks"
-    },
     "outputContent": {
       "type": "string"
+    },
+    "code": {
+      "type": "richtext"
     }
   }
 }

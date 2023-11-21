@@ -4,6 +4,7 @@ export interface MarksExperiments extends Schema.Component {
   collectionName: 'components_marks_experiments';
   info: {
     displayName: 'Experiments';
+    description: '';
   };
   attributes: {
     observation: Attribute.Integer;
@@ -12,8 +13,8 @@ export interface MarksExperiments extends Schema.Component {
     total: Attribute.Integer;
     ExpNo: Attribute.Integer;
     Submitted_Date: Attribute.Date;
-    code: Attribute.Blocks;
     outputContent: Attribute.String;
+    code: Attribute.RichText;
   };
 }
 
