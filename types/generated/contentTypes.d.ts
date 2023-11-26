@@ -679,6 +679,39 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAnnouncementAnnouncement extends Schema.CollectionType {
+  collectionName: 'announcements';
+  info: {
+    singularName: 'announcement';
+    pluralName: 'announcements';
+    displayName: 'Announcement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    facultyName: Attribute.String;
+    subject: Attribute.String;
+    description: Attribute.Text;
+    date: Attribute.Date;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::announcement.announcement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::announcement.announcement',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiExperimentExperiment extends Schema.CollectionType {
   collectionName: 'experiments';
   info: {
@@ -823,6 +856,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::announcement.announcement': ApiAnnouncementAnnouncement;
       'api::experiment.experiment': ApiExperimentExperiment;
       'api::progress.progress': ApiProgressProgress;
       'api::sample.sample': ApiSampleSample;
